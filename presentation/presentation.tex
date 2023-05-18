@@ -1,0 +1,100 @@
+% Author         : Pedro Ferreira (up201806093@up.pt)
+% Version        : 1.0
+% Created on     : 12.08.2022
+% Last Edited on : 14.08.2022
+
+% Adapted from HSRM theme by Benjamin Weiss
+% Copyright      : Copyright (c) 2013-2014 by Benjamin Weiss. All rights reserved.
+% License        : This file may be distributed and/or modified under the
+%                  GNU Public License.
+% Description    : HSRM beamer theme demonstration. Also includes a short 
+%                  Tutorial regarding the beamer class.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    !!! Compile with LuaLaTex !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[compress,aspectratio=169]{beamer}
+
+
+\usepackage{sleektheme/beamerthemesleek}
+\usetheme{sleek}
+\usepackage{sleektheme/dtklogos} % must be loaded after theme
+
+%--------------------------------------------------------------------------
+% Common packages
+%--------------------------------------------------------------------------
+\usepackage[ngerman]{babel}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,backgrounds}
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Advanced table functions
+\usepackage{tabularx,ragged2e}
+\usepackage{booktabs}
+% Listings extension
+\usepackage{listings}
+\lstset{ %
+language=[LaTeX]TeX,
+basicstyle=\normalsize\ttfamily,
+keywordstyle=,
+numbers=left,
+numberstyle=\tiny\ttfamily,
+stepnumber=1,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+breaklines=true,
+frame=tb,
+framerule=0.5pt,
+tabsize=4,
+framexleftmargin=0.5em,
+framexrightmargin=0.5em,
+xleftmargin=0.5em,
+xrightmargin=0.5em
+}
+
+\graphicspath{{../pictures/}}
+
+%--------------------------------------------------------------------------
+% Functions
+%--------------------------------------------------------------------------
+
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+%--------------------------------------------------------------------------
+% Document
+%--------------------------------------------------------------------------
+
+\title{Title}
+\subtitle{Subtitle}
+\author{Manuel Lippert}
+\institute{Physik (Master of Science)}
+
+\begin{document}
+
+	\maketitle
+
+	\begin{frame}{Gliederung}
+		\tableofcontents[hideallsubsections]
+	\end{frame}
+	
+	\centering
+
+\end{document}
+
+
+
+
+
+
