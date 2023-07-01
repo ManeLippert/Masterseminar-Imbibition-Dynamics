@@ -1,102 +1,74 @@
-% Name           : beamerthemesleek.sty
-% Author         : Pedro Ferreira (up201806093@up.pt)
+% Author         : Manuel Lippert
 % Version        : 1.0
-% Created on     : 12.08.2022
-% Last Edited on : 14.08.2022
+% Created on     : 11.06.2023
+% Last Edited on : 11.06.2023
 
-% Adapted from HSRM theme by Benjamin Weiss
-% Copyright      : Copyright (c) 2013-2014 by Benjamin Weiss. All rights reserved.
-% License        : This file may be distributed and/or modified under the
-%                  GNU Public License.
-% Description    : Beamer theme that complies with the corporate design of
-%                  the RheinMain University of Applied Sciences.
-%                   --> http://www.hs-rm.de
-
-\ProvidesPackage{beamerthemesleek}[2022/08/14]
-
-\usepackage{eso-pic}
-
-\newif\if@doSans
-\@doSansfalse
-\DeclareOption{noserifmath}{\@doSanstrue}
-\newif\if@doNoFlama
-\@doNoFlamafalse
-\DeclareOption{noflama}{\@doNoFlamatrue}
-\newif\if@doSectionPage
-\@doSectionPagefalse
-\DeclareOption{nosectionpages}{\@doSectionPagetrue}
-\ProcessOptions
+%---------------------------------------------------------------------
+% OPTIONS
+%---------------------------------------------------------------------
+\input{theme/options}
 
 \mode<presentation>
 
 %---------------------------------------------------------------------
 % TOC
 %---------------------------------------------------------------------
-\useoutertheme[subsection=false,shadow]{miniframes}
-\setbeamertemplate{section in toc}[sections numbered]
-\setbeamertemplate{subsection in toc}[subsections numbered]
-
-%---------------------------------------------------------------------
-% custom commands
-%---------------------------------------------------------------------
-\newcommand{\rightTextArrow}{→}
-\newcommand{\quoted}[1]{‘#1’}
-\newcommand{\doublequoted}[1]{“#1”}
+\input{theme/toc}
 
 %---------------------------------------------------------------------
 % Itemize
 %---------------------------------------------------------------------
-% \setbeamertemplate{itemize item}{\rightTextArrow}
-\setbeamertemplate{itemize item}{\bullet}
-\setbeamertemplate{itemize subitem}{\bullet}
-\setbeamertemplate{itemize subsubitem}{\bullet}
-
-\setlength{\parskip}{0.5em}
+\input{theme/itemize}
 
 %---------------------------------------------------------------------
 % Colors
 %---------------------------------------------------------------------
-\input{sleektheme/colors}
+\input{theme/colors}
 
 %---------------------------------------------------------------------
 % Fonts
 %---------------------------------------------------------------------
-\input{sleektheme/fonts}
+\input{theme/fonts}
 
 %---------------------------------------------------------------------
 % Titlepage
 %---------------------------------------------------------------------
-\input{sleektheme/title_page}
+\input{theme/titlepage}
 
 %---------------------------------------------------------------------
 % Sectionpages
 %---------------------------------------------------------------------
-\input{sleektheme/section_pages}
+\input{theme/sectionpages}
 
 %---------------------------------------------------------------------
 % Frametitle
 %---------------------------------------------------------------------
-\input{sleektheme/frame_title}
+\input{theme/frametitle}
 
 %---------------------------------------------------------------------
 % Footline
 %---------------------------------------------------------------------
-\input{sleektheme/footline}
+\input{theme/footline}
+
+%---------------------------------------------------------------------
+% Headline
+%---------------------------------------------------------------------
+\input{theme/headline}
 
 %---------------------------------------------------------------------
 % Captions
 %---------------------------------------------------------------------
-\setbeamertemplate{caption label separator}{: }
+\input{theme/captions}
 
 %---------------------------------------------------------------------
 % Blocks
 %---------------------------------------------------------------------
-\input{sleektheme/blocks}
+\input{theme/blocks}
 
 %---------------------------------------------------------------------
 % Images
 %---------------------------------------------------------------------
-\input{sleektheme/images}
+\input{theme/images}
 
 \mode
 <all>
