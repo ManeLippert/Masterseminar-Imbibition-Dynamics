@@ -1,0 +1,41 @@
+
+% \usetikzlibrary{angles, quotes, calc}
+
+\begin{tikzpicture}
+
+    % Coordinates
+    \coordinate (end) at (4,1.2);
+    \coordinate (start) at (4,0.8);
+    \coordinate (A) at (2,1.2);
+    \coordinate (B) at (7.5,2);
+    \coordinate (M) at (5,0.6);
+    \coordinate (H) at (7.5,1.2);
+
+    % Capillar
+    \draw [line width=0.5cm, gray!30] plot [smooth] coordinates { (A) (3,1.1) (3.5,0.4) (4,0.7) (4.5,0.3) (M) (5.5,1.5) (6,0.3) (B)};
+    \draw [thick, gray!80] plot [smooth] coordinates { (A) (3,1.1) (3.5,0.4) (4,0.7) (4.5,0.3) (M) (5.5,1.5) (6,0.3) (B)};
+
+    % Glas with Water
+    \draw [thick] (0,0) -- (0,3);
+    \draw [thick] (2,0) -- (2,3);
+    \draw [thick, fill = blue!30!white] (0,0) rectangle (2,2.5);
+
+    % Horizontal Line and Angle 
+    \draw [thick, dashed] (0,1.2) -- (H);
+    \draw [thick, dashed] (A) -- (M); %node[below] {$l_\mathrm{s}$}
+
+    \pic [thick, draw, <->, "$\psi$", angle eccentricity=1.1, angle radius = 70] {angle = start--A--end};
+
+    % Air Pressure and Height
+    \draw [thick, ->, orange]  (1,3.5) node[above] {$P_\mathrm{A}$} -- (1,2.5);
+    \draw [thick, <->] (1,2.5) -- node[left] {$h$} (1,1.2);
+
+    % Point A, B, M
+    \fill (A) circle (0.08) node [above right] {$A$};
+    \fill (B) circle (0.08) node [above] {$B$};
+    \fill (M) circle (0.08) node [right] {$M$};
+    \fill (H) circle (0.08) node [right] {$H$};
+
+    
+
+\end{tikzpicture}

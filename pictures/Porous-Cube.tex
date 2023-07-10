@@ -1,0 +1,35 @@
+% \usetikzlibrary{3d}
+
+\begin{tikzpicture}[x  = {(0.5cm,0.5cm)},
+                    y  = {(0.95cm,-0.25cm)},
+                    z  = {(0cm,0.9cm)}]
+
+    \def\a{1.5}
+
+    \begin{scope}[canvas is yz plane at x=-\a]
+        \shade[left color=gray!50,right color=gray!20] (-\a,-\a) rectangle (\a,\a);
+        \shade[left color=gray!60,right color=gray!30] (0.9,0.9) circle (0.3);
+        \shade[left color=gray!60,right color=gray!30] (0.8,-0.8) circle (0.6);
+        \shade[left color=gray!90,right color=gray!50] (-0.8,-0.8) circle (0.4);
+        \shade[left color=gray!70,right color=gray!40, rotate = 30] (0,0) ellipse (0.5 and 0.3);
+        \shade[left color=gray!80,right color=gray!50, rotate around={330:(-0.8,0.8)}] (-0.8,0.8) ellipse (0.6 and 0.3);
+    \end{scope}
+    \begin{scope}[canvas is xz plane at y=\a]
+        \shade[right color=gray!70,left color=gray!20] (-\a,-\a) rectangle (\a,\a);
+        \shade[left color=gray!80,right color=gray!50] (0.9,0.9) circle (0.3);
+        \shade[left color=gray!90,right color=gray!50] (0.8,-0.8) circle (0.5);
+        \shade[left color=gray!70,right color=gray!40] (-0.7,-0.7) circle (0.6);
+        %\shade[left color=gray!70,right color=gray!40] (-0.2,0.5) circle (0.6);
+        %\shade[left color=gray!40,right color=gray!70, rotate = 30] (0,0) ellipse (0.5 and 0.3);
+        \shade[left color=gray!70,right color=gray!40, rotate around={140:(-0.2,0.5)}] (-0.2,0.5) ellipse (1.0 and 0.4);
+    \end{scope}
+    \begin{scope}[canvas is yx plane at z=\a]
+        \shade[top color=gray!80,bottom color=gray!20] (-\a,-\a) rectangle (\a,\a);
+        %\shade[left color=gray!60,right color=gray!30] (0.9,0.9) circle (0.3);
+        \shade[top color=gray!90,bottom color=gray!50, rotate around={330:(0.8,0.8)}] (0.8,0.8) ellipse (0.6 and 0.3);
+        \shade[top color=gray!70,bottom color=gray!40] (0.8,-0.8) circle (0.6);
+        \shade[left color=gray!90,right color=gray!50] (-0.8,-0.8) circle (0.4);
+        %\shade[left color=gray!70,right color=gray!40, rotate = 30] (0,0) ellipse (0.5 and 0.3);
+        \shade[top color=gray!90,bottom color=gray!60, rotate around={50:(-0.5,0.6)}] (-0.5,0.6) ellipse (0.8 and 0.5);
+    \end{scope}
+\end{tikzpicture}

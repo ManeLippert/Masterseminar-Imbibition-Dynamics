@@ -1,0 +1,55 @@
+% \usetikzlibrary{angles, quotes, calc}
+
+\begin{tikzpicture}
+
+    % Coordinates
+    \coordinate (A) at (0, 2.75);
+    \coordinate (start) at (5.25, 2.75);
+    \coordinate (end) at (5,3.5);
+
+    % Capillar
+    % Cylinder
+    \draw [thick] (1,4.9) -- (5,4.9);
+    \draw [thick] (1,4.6) -- (5,4.6);
+    % Wedge
+    \draw [thick] (1,2.9) -- (5,3.5);
+    \draw [thick] (1,2.6) -- (5,2.0);
+    % Parabolic
+    \draw [thick, domain = 0:8, variable = \x] plot ({4/8 * \x + 1}, {- \x*\x /107 + 0.6});
+    \draw [thick, domain = 0:8, variable = \x] plot ({4/8 * \x + 1}, {+ \x*\x /107 + 0.9});
+
+    % Glas with Water
+    % Parabolic
+    \draw [thick, fill = blue!30!white, blue!30!white] (0,0) rectangle (1,1.5);
+    \draw (0,1.5) node [below left] {(c)};
+    \draw [thick] (1,0.9) -- (1,1.5);
+    \draw [thick] (1,0.0) -- (1,0.6);
+    % Wedge
+    \draw [thick, fill = blue!30!white, blue!30!white] (0,2) rectangle (1,3.5);
+    \draw (0,3.5) node [below left] {(b)};
+    \draw [thick] (1,2.9) -- (1,3.5);
+    \draw [thick] (1,2.0) -- (1,2.6);
+    % Cylinder
+    \draw [thick, fill = blue!30!white, blue!30!white] (0,4) rectangle (1,5.5);
+    \draw (0,5.5) node [below left] {(a)};
+    \draw [thick] (1,4.9) -- (1,5.5);
+    \draw [thick] (1,4.0) -- (1,4.6);
+
+    % Z-Axis
+    \draw [thick, ->, dashed] (1, 4.75) -- (5.25, 4.75) node [right] {$z$};
+    \draw [thick, ->, dashed] (1, 2.75) -- (5.25, 2.75) node [right] {$z$};
+    \draw [thick, ->, dashed] (1, 0.75) -- (5.25, 0.75) node [right] {$z$};
+
+    % r0 
+    \draw [thick, <->] (0.75,4.6) -- node [left] {$2r_0$} (0.75,4.9);
+    \draw [thick, <->] (0.75,2.6) -- node [left] {$2r_0$} (0.75,2.9);
+    \draw [thick, <->] (0.75,0.6) -- node [left] {$2r_0$} (0.75,0.9);
+
+    % Angle 
+    \pic [thick, draw, <->, "$\alpha$", angle eccentricity=1.1, angle radius = 80] {angle = start--A--end};
+
+    % r(z)
+    \draw [thick, ->] (4, 2.75) -- node [right] {$r(z)$} (4, 3.35) ;
+    \draw [thick, ->] (4, 0.75) -- node [right] {$r(z)$} (4, 1.24);
+
+\end{tikzpicture}

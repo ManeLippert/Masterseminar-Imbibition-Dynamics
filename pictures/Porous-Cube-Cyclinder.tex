@@ -1,0 +1,73 @@
+% \usetikzlibrary{3d}
+
+\begin{tikzpicture}[x  = {(0.5cm,0.5cm)},
+                    y  = {(0.95cm,-0.25cm)},
+                    z  = {(0cm,0.9cm)}]
+
+    \def\a{1.5}
+
+    \begin{scope}[canvas is yz plane at x=\a]
+        \draw[thick, gray!34] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is xz plane at y=-\a]
+        \draw[thick, gray!40] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is yx plane at z=-\a]
+        \draw[thick, gray!40] (-\a,-\a) rectangle (\a,\a);
+        
+        \coordinate (A') at (0.8,-0.8);
+        \coordinate (B') at (0.8,0.7);
+        \coordinate (c') at (0.0,0.2);
+        \coordinate (D') at (-0.8,0.8);
+        \coordinate (E') at (-0.9,-0.2);
+        \coordinate (F') at (-0.3,-0.9);
+
+        \draw[thick, blue!40] (A') circle (0.5);
+        \draw[thick, blue!40] (B') circle (0.4);
+        \draw[thick, blue!40] (c') circle (0.3);
+        \draw[thick, blue!40] (D') circle (0.5);
+        \draw[thick, blue!40] (E') circle (0.4);
+        \draw[thick, blue!40] (F') circle (0.3);
+
+    \end{scope}
+    
+    \begin{scope}[canvas is yx plane at z=\a]
+
+        \coordinate (A) at (0.8,-0.8);
+        \coordinate (B) at (0.8,0.7);
+        \coordinate (c) at (0.0,0.2);
+        \coordinate (D) at (-0.8,0.8);
+        \coordinate (E) at (-0.9,-0.2);
+        \coordinate (F) at (-0.3,-0.9);
+
+        \draw[thick,blue!40] ($ (A') + (210:0.5) $) -- ($ (A) + (210:0.5) $) ;
+        \draw[thick,blue!40] ($ (B') + (210:0.4) $) -- ($ (B) + (210:0.4) $) ;
+        \draw[thick,blue!40] ($ (c') + (210:0.3) $) -- ($ (c) + (210:0.3) $) ;
+        \draw[thick,blue!40] ($ (D') + (210:0.5) $) -- ($ (D) + (210:0.5) $) ;
+        \draw[thick,blue!40] ($ (E') + (210:0.4) $) -- ($ (E) + (210:0.4) $) ;
+        \draw[thick,blue!40] ($ (F') + (210:0.3) $) -- ($ (F) + (210:0.3) $) ;
+
+        \draw[thick,blue!40] ($ (A') + (30:0.5) $) -- ($ (A) + (30:0.5) $) ;
+        \draw[thick,blue!40] ($ (B') + (30:0.4) $) -- ($ (B) + (30:0.4) $) ;
+        \draw[thick,blue!40] ($ (c') + (30:0.3) $) -- ($ (c) + (30:0.3) $) ;
+        \draw[thick,blue!40] ($ (D') + (30:0.5) $) -- ($ (D) + (30:0.5) $) ;
+        \draw[thick,blue!40] ($ (E') + (30:0.4) $) -- ($ (E) + (30:0.4) $) ;
+        \draw[thick,blue!40] ($ (F') + (30:0.3) $) -- ($ (F) + (30:0.3) $) ;
+
+        \draw[thick, blue] (A) circle (0.5);
+        \draw[thick, blue] (B) circle (0.4);
+        \draw[thick, blue] (c) circle (0.3);
+        \draw[thick, blue] (D) circle (0.5);
+        \draw[thick, blue] (E) circle (0.4);
+        \draw[thick, blue] (F) circle (0.3);
+        
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is yz plane at x=-\a]
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is xz plane at y=\a]
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+
+\end{tikzpicture}
