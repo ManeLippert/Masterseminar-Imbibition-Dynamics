@@ -1,0 +1,120 @@
+% \usetikzlibrary{3d}
+
+\usetikzlibrary{patterns,decorations.pathmorphing}
+
+\colorlet{watercol}{blue!40}
+\tikzstyle{water}=[watercol!90!black!90, top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=watercol!80,shading angle=90]
+
+\begin{tikzpicture}[x  = {(0.5cm,0.5cm)},
+                    y  = {(0.95cm,-0.25cm)},
+                    z  = {(0cm,0.9cm)}]
+
+    \def\a{1.5}
+    \def\A{0.5}
+    \def\B{0.6}
+    \def\C{0.8}
+
+    \begin{scope}[canvas is yz plane at x=\a]
+        \draw[thick, gray!34] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is xz plane at y=-\a]
+        \draw[thick, gray!40] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is yx plane at z=-\a]
+        \draw[thick, gray!40] (-\a,-\a) rectangle (\a,\a);
+        
+        \coordinate (A') at (0.8,-0.8);
+        \coordinate (B') at (0.8,0.7);
+        \coordinate (C') at (0.0,0.2);
+        \coordinate (D') at (-0.8,0.8);
+        \coordinate (E') at (-0.9,-0.2);
+        \coordinate (F') at (-0.3,-0.9);
+
+    \end{scope}
+
+    \begin{scope}[canvas is yx plane at z=\A]
+        \coordinate (Aw) at (0.8,-0.8);
+        \coordinate (Dw) at (-0.8,0.8);
+    \end{scope}
+
+    \begin{scope}[canvas is yx plane at z=\B]
+        \coordinate (Bw) at (0.8,0.7);
+        \coordinate (Ew) at (-0.9,-0.2);
+    \end{scope}
+
+    \begin{scope}[canvas is yx plane at z=\C]
+        \coordinate (Cw) at (0.0,0.2);
+        \coordinate (Fw) at (-0.3,-0.9);
+    \end{scope}
+    
+    \begin{scope}[canvas is yx plane at z=\a]
+
+        \coordinate (A) at (0.8,-0.8);
+        \coordinate (B) at (0.8,0.7);
+        \coordinate (C) at (0.0,0.2);
+        \coordinate (D) at (-0.8,0.8);
+        \coordinate (E) at (-0.9,-0.2);
+        \coordinate (F) at (-0.3,-0.9);
+
+        \draw[water] ($ (A') + (210:0.5) $) -- ($ (Aw) + (210:0.5) $) arc (210:30:0.5) -- ($ (Aw) + (30:0.5) $) -- ($ (A') + (30:0.5) $) arc (30:-210:0.5);
+        \draw[water] ($ (B') + (210:0.4) $) -- ($ (Bw) + (210:0.4) $) arc (210:30:0.4) -- ($ (Bw) + (30:0.4) $) -- ($ (B') + (30:0.4) $) arc (30:-210:0.4);
+        \draw[water] ($ (C') + (210:0.3) $) -- ($ (Cw) + (210:0.3) $) arc (210:30:0.3) -- ($ (Cw) + (30:0.3) $) -- ($ (C') + (30:0.3) $) arc (30:-210:0.3);
+        \draw[water] ($ (D') + (210:0.5) $) -- ($ (Dw) + (210:0.5) $) arc (210:30:0.5) -- ($ (Dw) + (30:0.5) $) -- ($ (D') + (30:0.5) $) arc (30:-210:0.5);
+        \draw[water] ($ (E') + (210:0.4) $) -- ($ (Ew) + (210:0.4) $) arc (210:30:0.4) -- ($ (Ew) + (30:0.4) $) -- ($ (E') + (30:0.4) $) arc (30:-210:0.4);
+        \draw[water] ($ (F') + (210:0.3) $) -- ($ (Fw) + (210:0.3) $) arc (210:30:0.3) -- ($ (Fw) + (30:0.3) $) -- ($ (F') + (30:0.3) $) arc (30:-210:0.3);
+
+        \draw[thick, black] (A') circle (0.5);
+        \draw[thick, black] (B') circle (0.4);
+        \draw[thick, black] (C') circle (0.3);
+        \draw[thick, black] (D') circle (0.5);
+        \draw[thick, black] (E') circle (0.4);
+        \draw[thick, black] (F') circle (0.3);
+
+        % \draw[thick, blue] (Aw) circle (0.5);
+        % \draw[thick, blue] (Bw) circle (0.4);
+        % \draw[thick, blue] (Cw) circle (0.3);
+        % \draw[thick, blue] (Dw) circle (0.5);
+        % \draw[thick, blue] (Ew) circle (0.4);
+        % \draw[thick, blue] (Fw) circle (0.3);
+
+        \draw[thick,black] ($ (A') + (210:0.5) $) -- ($ (A) + (210:0.5) $) ;
+        \draw[thick,black] ($ (B') + (210:0.4) $) -- ($ (B) + (210:0.4) $) ;
+        \draw[thick,black] ($ (C') + (210:0.3) $) -- ($ (C) + (210:0.3) $) ;
+        \draw[thick,black] ($ (D') + (210:0.5) $) -- ($ (D) + (210:0.5) $) ;
+        \draw[thick,black] ($ (E') + (210:0.4) $) -- ($ (E) + (210:0.4) $) ;
+        \draw[thick,black] ($ (F') + (210:0.3) $) -- ($ (F) + (210:0.3) $) ;
+
+        \draw[thick,black] ($ (A') + (30:0.5) $) -- ($ (A) + (30:0.5) $) ;
+        \draw[thick,black] ($ (B') + (30:0.4) $) -- ($ (B) + (30:0.4) $) ;
+        \draw[thick,black] ($ (C') + (30:0.3) $) -- ($ (C) + (30:0.3) $) ;
+        \draw[thick,black] ($ (D') + (30:0.5) $) -- ($ (D) + (30:0.5) $) ;
+        \draw[thick,black] ($ (E') + (30:0.4) $) -- ($ (E) + (30:0.4) $) ;
+        \draw[thick,black] ($ (F') + (30:0.3) $) -- ($ (F) + (30:0.3) $) ;
+
+        % \draw[thick,blue!40] ($ (F') + (30:0.3) $) -- ($ (F) + (30:0.3) $) ;
+        %\draw[water] (0,1) ellipse ({1} and {1});
+
+        \draw[thick, black] (A) circle (0.5);
+        \draw[thick, black] (B) circle (0.4);
+        \draw[thick, black] (C) circle (0.3);
+        \draw[thick, black] (D) circle (0.5);
+        \draw[thick, black] (E) circle (0.4);
+        \draw[thick, black] (F) circle (0.3);
+
+        \draw[thick, black] (A') circle (0.5);
+        \draw[thick, black] (B') circle (0.4);
+        \draw[thick, black] (C') circle (0.3);
+        \draw[thick, black] (D') circle (0.5);
+        \draw[thick, black] (E') circle (0.4);
+        \draw[thick, black] (F') circle (0.3);
+        
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is yz plane at x=-\a]
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+    \begin{scope}[canvas is xz plane at y=\a]
+        \draw[thick] (-\a,-\a) rectangle (\a,\a);
+    \end{scope}
+
+\end{tikzpicture}
