@@ -274,9 +274,9 @@ which can be expressed as
 	\boxed{l^2 = \left(\frac{\gamma}{\mu}\frac{\cos \theta}{2}\right)rt}~.
 	\label{eq:BCLW-Imbibition}
 \end{gather}
-Equation (\ref{eq:BCLW-Imbibition}) is also known as "Lucas-Washburn Law" and describes the distance $l$, which gets penetrated in the capillary after the time $t$. The same result can be obtained in case (II) with the same assumption and a second integration over the length $l$. The rate can be expressed as
+Equation (\ref{eq:BCLW-Imbibition}) is also known as "Lucas-Washburn Law" and describes the distance $l$, which gets penetrated in the capillary after the time $t$. The same result can be obtained in case (II) with the same assumption and a integration over the length $l$ of Equation (\ref{eq:poiseuille-velocity-pressure}). The rate can be expressed as
 \begin{gather}
-	\boxed{\dldt = \frac{r}{\mu} \frac{\gamma}{4l} \cos \theta}~.
+	\boxed{\dldt = \frac{r^2}{8\mu l} \frac{2\gamma}{r} \cos \theta}~.
 	\label{eq:rate}
 \end{gather}
 The rate at which a liquid penetrates any horizontal capillary (or any capillary with a small surface) under its own capillary pressure is directly proportional to the radius of the capillary, to the cosine of the angle of contact, to the ratio of the surface tension to the viscosity of the liquid and inversely proportional to the length already filled by the liquid. The quantity $((\gamma \cos \theta)/2 \mu)$ is referred as \textit{penetrativity} and measures the penetrating power of a liquid. 
@@ -309,7 +309,7 @@ where $S$ is independent of the nature of the liquid. Finally, the degree of pen
 	\label{fig:imbibition-height}
 \end{center}
 
-An experiment with filter paper \cite{Dullien1991} was performed to show the robust result of the "Lucas-Washburn Law". In this experiment, ordinary coffee filter paper was put in contact with water for a given amount of time. After that, the length of wetted paper have been measured [Fig. \ref{fig:imbibition-height}]. The obtained data was evaluated for a $f = a \cdot t^{1/2}$ fit, although some offset was be taken into account to get a better fit. Figure \ref{fig:imbibition-eval} shows clearly the relation between the length of column liquid $l$ and the time $t$ with $l \sim T^{1/2}$, which confirms the postulated from "Lucas-Washburn Law" [Eq. (\ref{eq:BCLW-Imbibition})]. 
+An experiment with filter paper \cite{Dullien1991} was performed to show the robust result of the "Lucas-Washburn Law". In this experiment, ordinary coffee filter paper was put in contact with water for a given amount of time. After that, the length of wetted paper have been measured [Fig. \ref{fig:imbibition-height}]. The obtained data was evaluated for a $f = a \cdot t^{1/2}$ fit, although some offset was be taken into account to get a better fit. Figure \ref{fig:imbibition-eval} shows clearly the relation between the length of column liquid $l$ and the time $t$ with $l \sim t^{1/2}$, which confirms the postulated from "Lucas-Washburn Law" [Eq. (\ref{eq:BCLW-Imbibition})]. 
 
 \begin{center}
 	\captionsetup{type=figure}
@@ -326,7 +326,7 @@ An experiment with filter paper \cite{Dullien1991} was performed to show the rob
 In this paragraph, the influence of the capillary geometry on the imbibition dynamics will be studied, which is based on the publication from Reyssat et al. \cite{Reyssat2008}. In the following, only the three-dimensional case will be discussed.
 \bigskip
 
-To characterize the viscous dominated dynamics, the incompressible flows will be treated as one-dimensional in the axial or z-direction while using the classical Darcy description. The analytical development is general for any one-dimensional flow to which the Darcy description applies. Here, $r(z)$ donates half of the width of the capillary and $z = 0$ indicates the opening with radius $r(0) = r_0$. Figure \ref{fig:geometry} shows three different geometry in two-dimensional plane for (a) cylindrical, (b) cone and (c) parabolic capillary. These capillaries are in contact with a reservoir of liquid at ambient pressure $P_0$, containing atmospheric pressure $\Pa$ and hydrostatic pressure $\Ps$. Wetting of the liquid on the walls leads to an invasion process.
+To characterize the viscous dominated dynamics, the incompressible flows will be treated as one-dimensional in the axial or z-direction while using the classical Darcy description. The analytical development is general for any one-dimensional flow to which the Darcy description applies. Here, $r(z)$ donates half of the width of the capillary and $z = 0$ indicates the opening with radius $r(0) = r_0$. Figure \ref{fig:geometry} shows three different geometry in two-dimensional plane for (a) cylindrical, (b) cone and (c) parabolic capillary. These capillaries are in contact with a reservoir of liquid at ambient pressure $P_0$, containing atmospheric pressure $\Pa$ and hydrostatic pressure $\Ph$. Wetting of the liquid on the walls leads to an invasion process.
 
 \begin{center}
 	\captionsetup{type=figure}
@@ -378,7 +378,7 @@ where $\alpha$ is the opening angle and depends on the exponent $n$. Next, the m
 	\dldt = \frac{c \gamma r_0}{8\mu} \left[ \left(1 + \frac{\alpha}{r_0} l^n \right)^3 \int_0^{l}\!\!\!\dz~\left(1 + \frac{\alpha}{r_0} z^n \right)^{-4} \right]^{-1}~.
 	\label{eq:rate-geometry-power-law}
 \end{gather}
-In general, $c$ depends on the position of the meniscus and the geometry with $c(l) = 2\cos(\theta + \arctan(\mathrm{d}r(l)/\mathrm{d}z))$, but since the cosine is bounded, the approximation of $c = \text{const}$ will be applied. Additionally, to preserve clarity, the following dimensionless parameters will be introduced
+In general, $c$ depends on the position of the meniscus and the geometry with $c(l) = 2\cos(\theta + \arctan(\mathrm{d}r(l)/\mathrm{d}z))$, but since the cosine is bounded, the approximation of $c \approx \text{const}$ will be applied. Additionally, to preserve clarity, the following dimensionless parameters will be introduced
 \begin{gather}
 	L = \left(\frac{\alpha}{r_0}\right)^{1/n} l\quad\text{and}\quad T = \frac{c\gamma r_0}{8\mu} \left(\frac{\alpha}{r_0}\right)^{2/n} t~,
 \end{gather}
