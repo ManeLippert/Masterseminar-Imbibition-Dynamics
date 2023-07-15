@@ -1,0 +1,143 @@
+------------------------------------------------------------------------------------------------------------------
+STARTPAGE
+
+------------------------------------------------------------------------------------------------------------------
+MOTIVATION - WHAT IS IMBIBITION?
+
+- Imbibition process of everyday life
+- Dunking biscuit into coffee, getting drenched with rain, drenching sugar with alcohol
+- Application in nature
+    -> Water reaching tips of the tallest trees
+    -> Flow through soil (Dracy Law)
+-Application in industry
+    -> Oil recovery
+    -> Chromatography (experiment in chemistry)
+    -> Food processing, agriculture 
+- Interplay of capillary pressure, viscous drag, volume conservation and gravity
+- Evolution of invasion with universial scaling on large length and timescales 
+    -> Independent of the microscopic details of the fluid and media
+
+- In the following discussion about the Lucas Washburn Law and the influence of geometry
+
+------------------------------------------------------------------------------------------------------------------
+THEORY - CAPILLARY FLOW
+
+- This section about the Lucas-Washburn Law also known as BCLW Imbibition
+    -> BC = Bell, Cameron (1906) find relation between length and time experimentally
+    -> L = Lucas (1918) find coeffient of the relation
+    -> W = Washburn (1921) theoretical derivation
+
+    -> Concentrate on the derivation
+
+- Explain geometry
+    -> Single capillary with uniform circular cross-section r (any length and shape)
+    -> Contact with the liquid at point A in depth
+    -> End B open to atmosphere or closed and evacuated 
+
+- After time t_0 and lenght l_0 velocity dropped to a value that follows the Poiseulli's Law
+- Poiseulli's Law will from there on persist
+- For small capillary only the Poiseulli's regime from concern 
+- Poiseulli's Law (epsilon is coeffient of the slip, l length of column liquid) should be known
+
+- After time t the meniscus will arrived at point M with velocity (dl/dt)
+- Capillary cylindrical shape -> dV 
+- Pressure given by 
+    -> P_A atmospheric pressure (const), 
+    -> P_h hydrostatic pressure (ls and psi) and 
+    -> P_s capillary pressure (contact angle theta and surface tension)
+
+- Assumption pis, theta, eps const
+- Limiting only to cases with psi = 0, pi/2 -> ls = l
+- Rearrangement
+- Simplificate with R, P_R and C_h
+- Integrate inverse of quotient dl/dt
+
+- Look at psi = pi/2 and assumptions
+    -> psi = pi/2, C_h with new value
+    -> eps = 0 (true for liquids which wets the capillary) R with new value
+    -> liquid moves under its own capillary pressure P_R = P_s 
+
+- Expansion of logarithmic term (C_h l << P_R)
+- Rearrangement -> Lucas-Washburn Law 
+- Same result for psi = 0 
+- Factor is called penetrativity (proportionalities)
+- Rate of penetration (proportionalities)
+- Amount of Liquid entered in porous media
+    -> Small capillaries with different radius but small enough
+    -> Volume equation
+
+------------------------------------------------------------------------------------------------------------------
+THEORY - GEOMETRY 
+
+- Based on Reyssat and only concentrate on the 3D case
+- One-Dimensional flow in z-Direction 
+- Using classical Darcy description with Darcy Law (Experimental Law from Henry Darcy)
+    -> averaged velocity u 
+    -> permeability k (ability of material to transmit fluid) depending on shape of the cross-section
+- From Mass conservation follows Volumetric Flow Q 
+- Pressure P_0 with (P_A and P_h) and P_s with c parameter depending local geometry and contact angle theta
+- Integrate from z = 0 (P = P_0) to z = l (P = P_0 - P_s) and Rearrangements
+- Substitute Q with velocity of the meniscus at position l with known equation but on position l (r(l))
+- General imbibition equation for invasion into structured solid in 3D
+
+- Use Power-Law to describe capillary structure
+- Assume c(l) is approximately const since cosine is bounded
+- Dimensionaless Parameter
+- Dimensionaless Equation
+
+- Case n = 0 -> Lucas Washburn Law
+- Case n >= 1 
+    -> Short times L << 1 -> Bracket = 1, Integral = L 
+        -> L ~T^1/2
+    -> Long times  L >> 1 -> Bracket = L^n, Integral = Integral to infinity = const for n > 1/4 
+        -> L ~T^1/(3n+1)
+- Show Graphic of Solution
+- Cross-Over between this two limits at L = 1
+- Second regime depends on parameter n 
+    -> The more diverging the geometry, the slower the dynamics become at long times
+
+-----------------------------------------------------------------------------------------------------------------
+EXPERIMENTS
+
+- Experiments with sugar since the subject is the Feuerzangenbowle
+    -> Water (blue) video slowed down 1s = 0.125s
+    -> Glycerin (green, more viscous) video sped up 1s = 30s
+- Experiment with filter paper (Inspiration from Dullien which was mentioned in Reyssat study)
+    -> Put coffee filter paper in contact with water
+    -> l = t^1/2 lit bit visible
+    -> Repeat experiment multiple times and get Lucas-Washburn Law (with substraction of offset (explain?))
+- Life Experiment with big sugar cone (?)
+
+-----------------------------------------------------------------------------------------------------------------
+CONCLUSION
+
+- Imbibition is an important process in nature and industry
+- Capillary-driven Imbibition discribed by Lucas-Washburn Law
+- Geometry with two regimes at short and long times
+- More diverging, slower the dynamics at long times
+- Simple experiment with coffee filter paper proofs Lucas-Washburn Law
+
+-----------------------------------------------------------------------------------------------------------------
+APPENDIX
+
+- 2D geometry imbibition
+    -> Volumetric rate and permeability changes
+    -> r power goes down by one digit
+    -> Short time regime still the same
+    -> Long time regime decrement the factor before n
+    -> Rest the same
+
+- Why c(l) is constant?
+    -> Lubrication theory (wetting of capillary) requires dr/dz << 1 for n > 1
+    -> arctan simplfy
+    -> cos can be expanded for wetting case theta << 1
+    -> c = const for factor << 1
+    -> Additional dependency between r_0, alpha and n
+
+- Experiments with Vycor Glass
+    -> Vycor Glass = silica substrate with an interconnected network of nanometer-sized, elongated pores 
+    -> H(t) mean height
+    -> w(t) distance between H(t) and maximal invasion front
+    -> Lucas-Washburn Law still applies
+
+- Outtakes
