@@ -134,11 +134,16 @@
 \newcommand{\dLdT}{\frac{\mathrm{d}L}{\mathrm{d}T}}
 \newcommand{\Pa}{P_\mathrm{A}}
 \newcommand{\Pt}{P}
+\newcommand{\Ptr}{P_\mathrm{R}}
 \newcommand{\Ps}{P_\mathrm{s}}
 \newcommand{\Ph}{P_\mathrm{h}}
+\newcommand{\Phr}{C_\mathrm{h}}
 \newcommand{\ls}{l_\mathrm{s}}
 \newcommand{\dz}{\mathrm{d}z}
 \newcommand{\dZ}{\mathrm{d}Z}
+\newcommand{\dV}{\mathrm{d}V}
+\newcommand{\dt}{\mathrm{d}t}
+\newcommand{\dl}{\mathrm{d}l}
 
 
 % MAIN =====================================================================================================================
@@ -178,7 +183,7 @@
 	\label{fig:porous-cube}
 \end{center}
 
-Many everyday processes involve the flow of a liquid into a porous media [Fig. \ref{fig:porous-cube}], dunking a biscuit into coffee, cleaning the floor with a cloth, or get drenched with rain. The same process is also important in nature for water to reach the tips of the tallest trees or to flow through soil and for different industrial processes, ranging from oil recovery and chromatography to food processing, agriculture, heterogeneous catalysis, and impregnation. The above processes are examples of imbibition. Imbibition of a liquid into a porous media is governed by the interplay of capillary pressure, viscous drag, volume conservation, and gravity. The porous media often has a complex topology, which result in variations in the permeability and in the capillary pressure at the moving interface. Nevertheless, the invasion front during solely capillarity-driven imbibition advances in a simple square root of time manner, according to the "Lucas-Washburn Law" \cite{Bell1906, Lucas1918, Washburn1921}. It is valid down to nanoscopic pore sizes \cite{Dimitrov2007,Gruener2009a,Gruener2009b} and particularly robust with regard to the geometrical complexity of the porous media \cite{Reyssat2008}. The evolution of the invasion front displays universal scaling features on large length and timescales, which are independent of the microscopic details of the fluid and media. \cite{Gruener2012}	
+Many everyday processes involve the flow of a liquid into a porous media [Fig. \ref{fig:porous-cube}]. For example, dunking a biscuit into coffee, cleaning the floor with a cloth, getting drenched with rain or drenching sugar with alcohol during a Feuerzangenbowle. The same process is also important in nature for water to reach the tips of the tallest trees or to flow through soil. Also in industrial processes, ranging from oil recovery and chromatography to food processing, agriculture, heterogeneous catalysis and impregnation, does this phenomena has its application. The above processes are examples of imbibition. Imbibition of a liquid into a porous media is governed by the interplay of capillary pressure, viscous drag, volume conservation, and gravity. The porous media often has a complex topology, which results in variations in the permeability and in the capillary pressure at the moving interface. Nevertheless, the invasion front during solely capillarity-driven imbibition advances in a simple square root of time manner, according to the "Lucas-Washburn Law" \cite{Bell1906, Lucas1918, Washburn1921}. It is valid down to nanoscopic pore sizes \cite{Dimitrov2007,Gruener2009a,Gruener2009b} and particularly robust with regard to the geometrical complexity of the porous media \cite{Reyssat2008}. The evolution of the invasion front displays universal scaling features on large length and timescales, which are independent of the microscopic details of the fluid and media. \cite{Gruener2012}	
 
 \section{Imbibition and Dynamics of Capillary flow}
 \label{sec:BCLW-imbibition}
@@ -192,25 +197,25 @@ In this section the "Lucas-Washburn Law" will be covered. It is also known as "B
 	\label{fig:lucas-washburn-setup}
 \end{center}
 
-In the following take a closer look at a single capillary tube with uniform circular cross-section with radius $r$ and any length and shape connected to a glass containing liquid. The tube makes contact with the liquid at point $A$ in a depth of $h$. The end $B$ should either be open to the atmosphere or closed and completely evacuated. A illustration of the circumstances can be seen in Fig. \ref{fig:lucas-washburn-setup}.
+In the following take a closer look at a single capillary tube with uniform circular cross-section with radius $r$ and any length and shape connected to a glass containing liquid. The tube makes contact with the liquid at point $A$ in a depth of $h$. The end $B$ should either be open to the atmosphere or closed and completely evacuated. An illustration of the circumstances can be seen in Fig. \ref{fig:lucas-washburn-setup}.
 \bigskip
 
-At the beginning the liquid establishes connection with the tube. After some time $t_0$ the meniscus will have penetrated a distance $l_0$ at which point its velocity will have dropped to a value that follows the condition of flow postulated in Poiseuille's law and will thereafter persist. For the dynamics of capillary flow only the Poiseuille region is from concern if the capillaries are chosen small enough. Poiseuille's law with neglected air resistance will then be given by the equation 
+At the beginning the liquid establishes connection with the tube. After some time $t_0$ the meniscus will have penetrated a distance $l_0$. At this point its velocity will have dropped to a value that follows the condition of flow postulated in Poiseuille's law and will thereafter persist. For the dynamics of capillary flow only the Poiseuille region is from concern, if the capillaries are chosen small enough. Poiseuille's law with neglected air resistance will then be given by the equation 
 \begin{gather}
-	dV = \frac{\pi \Pt}{8\mu l}\left(r^4 + 4\epsilon r^3 \right) dt~,
+	\dV = \frac{\pi \Pt}{8\mu l}\left(r^4 + 4\epsilon r^3 \right) \dt~,
 	\label{eq:poiseuille-law}
 \end{gather}
-where $dV$ is the volume of the liquid which in the time $dt$ flows through any cross-section of the capillary, $l$ the length of the column liquid in the capillary at the time $t$, $\mu$ the viscosity of the liquid and $\epsilon$ its coefficient of the slip and $\Pt$ the total driving pressure upon the liquid. The meniscus will have arrived at Point $M$ after the time $t$ with the velocity of $\left(\mathrm{d}l/\mathrm{d}t\right)$. Since the capillary is in cylindrical shape the change of volume $dV$ can also be written as
+where $\dV$ is the volume of the liquid which in the time $\dt$ flows through any cross-section of the capillary, $l$ the length of the column liquid in the capillary at the time $t$, $\mu$ the viscosity of the liquid and $\epsilon$ its coefficient of the slip and $\Pt$ the total driving pressure upon the liquid. The meniscus will have arrived at Point $M$ after the time $t$ with the velocity of $\left(\mathrm{d}l/\mathrm{d}t\right)$. Since the capillary has an cylindrical shape, the change of volume $\dV$ can also be written as
 \begin{gather}
-	dV = \pi r^2 dl
+	\dV = \pi r^2 \dl
 	\label{eq:change-cylinder}
 \end{gather}
-with the circular cross-section $\pi r^2$ and the change of length $dl$. Inserting this relation in Equation (\ref{eq:poiseuille-law}) results in the following expression for the velocity
+with the circular cross-section $\pi r^2$ and the change of length $\dl$. Inserting this relation in Equation (\ref{eq:poiseuille-law}) results in the following expression for the velocity
 \begin{gather}
 	\dldt = \frac{\Pt}{8\mu l}\left(r^2 + 4\epsilon r \right)~.
 	\label{eq:poiseuille-velocity}
 \end{gather}
-The total driving pressure $\Pt$ will be made up in three separate pressures, the atmospheric pressure $\Pa$, the hydrostatic pressure $\Ph$ and the capillary pressure $\Ps$. The atmospheric pressure $\Pa$ shall be taken constant. The hydrostatic pressure can be written as
+The total driving pressure $\Pt$ will be made up in three separate pressures: The atmospheric pressure $\Pa$, the hydrostatic pressure $\Ph$ and the capillary pressure $\Ps$. The atmospheric pressure $\Pa$ shall be taken constant. The hydrostatic pressure can be written as
 \begin{gather}
 	\Ph = hgD - \ls g D \sin \psi~,
 	\label{eq:hydrostatic-pressure}
@@ -242,38 +247,39 @@ Substituting Equation (\ref{eq:pressure}) into Equation (\ref{eq:poiseuille-velo
 % which states that the distance $l_0$ is entirely negligible for very small capillaries ($l_0 \sim r^3$). 
 \bigskip
 
-To determine the length of column liquid $l$ after the time $t$ Equation (\ref{eq:poiseuille-velocity-pressure}) will be rearranged under the assumption $\psi$, $\epsilon$ and $\theta$ are constant and $\ls \approx l$. This results in the following expression
+Two limiting cases (I) $\psi = \pi/2$, which corresponds to vertical capillaries with small internal surfaces and (II) $\psi = 0$, which refers to horizontal capillaries, offer some special interest.
+To determine the length of column liquid $l$ after the time $t$, Equation (\ref{eq:poiseuille-velocity-pressure}) will be rearranged under the assumption $\psi$, $\epsilon$ and $\theta$ are constant and $\ls = l$. which follows from $\psi = 0, \pi/2$. This results in the following expression
 \begin{gather}
 	\begin{aligned}
 		\dldt &= \frac{\left(r^2 + 4\epsilon r \right)}{8\mu}\frac{\left(\Pa + gDh + \frac{2\gamma}{r}\cos \theta - gDl \sin \psi \right)}{l}\\
-			  &= R \frac{\left(\Pt^* - \Ph^* l\right)}{l} = \frac{R \Ph^* \left( 1 - (\Ph^*/\Pt^*) l\right)}{(\Ph^*/\Pt^*) l}~,
+			  &= R \frac{\left(\Ptr - \Phr l\right)}{l} = \frac{R \Phr \left( 1 - (\Phr/\Ptr) l\right)}{(\Phr/\Ptr) l}~,
 	\end{aligned}
 	\label{eq:poiseuille-velocity-pressure-rearranged}
 \end{gather}
-where $\Pt^*$ is the reduced total driving pressure, $\Ph^*$ the reduced hydrostatic pressure coefficient and $R$ a constant. Inverting Equation (\ref{eq:poiseuille-velocity-pressure-rearranged}) and integrate for $l$ gives
+where $\Ptr$ is the reduced total driving pressure, $\Phr$ the reduced hydrostatic pressure coefficient and $R$ a constant. Inverting Equation (\ref{eq:poiseuille-velocity-pressure-rearranged}) and integrate for $l$ gives
 \begin{gather}
-	R \Ph^* t = - l - \frac{1}{(\Ph^*/\Pt^*)} \ln\left(1- (\Ph^*/\Pt^*) l \right)~.
+	R \Phr t = - l - \frac{1}{(\Phr/\Ptr)} \ln\left(1- (\Phr/\Ptr) l \right)~.
 	\label{eq:length}
 \end{gather}
-Two limiting cases (I) $\psi = \pi/2$ which corresponds to vertical capillaries with small internal surfaces and (II) $\psi = 0$ which refers to horizontal capillaries offer some special interest. For case (I) the hydrostatic pressure coefficient $\Ph^*$ has the value $gD$. Under the assumption that the liquid is moving under its own capillary pressure ($\Pa + Dgh \ll  2\gamma\cos\theta/r$) the reduced total driving pressure equals $\Pt^* \approx 2\gamma\cos\theta/r$. Furthermore, the assumption $\epsilon = 0$ will be used which is the case for all liquids which wet the capillary and results in $R = r^2/8\mu$. Taking everything into account the logarithmic term in Equation (\ref{eq:length}) can be expanded to the second order
+For case (I), the hydrostatic pressure coefficient $\Phr$ has the value $gD$. Under the assumption that the liquid is moving under its own capillary pressure ($\Pa + Dgh \ll  2\gamma\cos\theta/r$), the reduced total driving pressure equals $\Ptr \approx 2\gamma\cos\theta/r$. Furthermore, the assumption $\epsilon = 0$ will be used, which is the case for all liquids which wets the capillary and results in $R = r^2/8\mu$. Taking everything into account, the logarithmic term in Equation (\ref{eq:length}) can be expanded to the second order
 \begin{gather}
 	\begin{aligned}
-		R \Ph^* t &\approx - l + \frac{1}{(\Ph^*/\Pt^*)} \left((\Ph^*/\Pt^*) l + \frac{(\Ph^*/\Pt^*)^2}{2} l^2 \right) \\
-				  &= \frac{(\Ph^*/\Pt^*)}{2} l^2~,
+		R \Phr t &\approx - l + \frac{1}{(\Phr/\Ptr)} \left((\Phr/\Ptr) l + \frac{(\Phr/\Ptr)^2}{2} l^2 \right) \\
+				  &= \frac{(\Phr/\Ptr)}{2} l^2~,
 	\end{aligned}
 	\label{eq:length-expanded}
 \end{gather}
-which can expressed as
+which can be expressed as
 \begin{gather}
 	\boxed{l^2 = \left(\frac{\gamma}{\mu}\frac{\cos \theta}{2}\right)rt}~.
 	\label{eq:BCLW-Imbibition}
 \end{gather}
-Equation (\ref{eq:BCLW-Imbibition}) is also known as "Lucas-Washburn Law" and described the distance $l$ which gets penetrated in the capillary after the time $t$. The same result can be obtained in case (II) with the same assumption and a second integration over the length $l$. The rate can be expressed as
+Equation (\ref{eq:BCLW-Imbibition}) is also known as "Lucas-Washburn Law" and describes the distance $l$, which gets penetrated in the capillary after the time $t$. The same result can be obtained in case (II) with the same assumption and a second integration over the length $l$. The rate can be expressed as
 \begin{gather}
 	\boxed{\dldt = \frac{r}{\mu} \frac{\gamma}{4l} \cos \theta}~.
 	\label{eq:rate}
 \end{gather}
-The rate at which a liquid penetrates any horizontal capillary (or any capillary with a small surface), under its own capillary pressure is directly proportional to the radius of the capillary, to the cosine of the angle of contact, to the ratio of the surface tension to the viscosity of the liquid and inversely proportional to the length already filled by the liquid. The quantity $((\gamma \cos \theta)/2 \mu)$ is referred as \textit{penetrativity} and measures the penetrating power of a liquid. 
+The rate at which a liquid penetrates any horizontal capillary (or any capillary with a small surface) under its own capillary pressure is directly proportional to the radius of the capillary, to the cosine of the angle of contact, to the ratio of the surface tension to the viscosity of the liquid and inversely proportional to the length already filled by the liquid. The quantity $((\gamma \cos \theta)/2 \mu)$ is referred as \textit{penetrativity} and measures the penetrating power of a liquid. 
 \bigskip
 
 \begin{center}
@@ -283,7 +289,7 @@ The rate at which a liquid penetrates any horizontal capillary (or any capillary
 	\label{fig:porous-cube-cylinder}
 \end{center}
 
-To calculate the amount of liquid which will have entered the porous body at the end of time $t$ one assumes that the penetration of the pores of a body is equivalent to the penetration of n cylindrical capillary tubes of radii ${r_1,...,r_N}$ [Fig. \ref{fig:porous-cube-cylinder}]. The volume for small capillaries will be given with Equation (\ref{eq:BCLW-Imbibition}) by
+To calculate the amount of liquid, which will have entered the porous body at the end of time $t$ one assumes that the penetration of the pores of a body is equivalent to the penetration of n cylindrical capillary tubes of radii ${r_1,...,r_N}$ [Fig. \ref{fig:porous-cube-cylinder}]. The volume for small capillaries will be given with Equation (\ref{eq:BCLW-Imbibition}) by
 \begin{gather}
 	V = \sum_{i=1}^N \pi r_i^2 l = \frac{\pi}{2} \left(\frac{t}{\mu}\right)^{1/2} \sum_{i=1}^N \left(\frac{2 \gamma}{r_i}\cos\theta \right)^{1/2} r_i^3~,
 \end{gather}
@@ -303,7 +309,7 @@ where $S$ is independent of the nature of the liquid. Finally, the degree of pen
 	\label{fig:imbibition-height}
 \end{center}
 
-An experiment with filter paper \cite{Dullien1991} was performed to show the robust result of the "Lucas-Washburn Law". In this experiment ordinary coffee filter paper was put in contact with water for a given amount of time and then the length of wetted paper measured [Fig. \ref{fig:imbibition-height}]. The obtained data was evaluated for a $f = a \cdot t^{1/2}$ fit although some offset had to take into account to get a better fit. Figure \ref{fig:imbibition-eval} shows clearly the relation between the length of column liquid $l$ and the time $t$ with $l \sim T^{1/2}$, which confirms the postulated from "Lucas-Washburn Law" [Eq. (\ref{eq:BCLW-Imbibition})]. 
+An experiment with filter paper \cite{Dullien1991} was performed to show the robust result of the "Lucas-Washburn Law". In this experiment, ordinary coffee filter paper was put in contact with water for a given amount of time. After that, the length of wetted paper have been measured [Fig. \ref{fig:imbibition-height}]. The obtained data was evaluated for a $f = a \cdot t^{1/2}$ fit, although some offset was be taken into account to get a better fit. Figure \ref{fig:imbibition-eval} shows clearly the relation between the length of column liquid $l$ and the time $t$ with $l \sim T^{1/2}$, which confirms the postulated from "Lucas-Washburn Law" [Eq. (\ref{eq:BCLW-Imbibition})]. 
 
 \begin{center}
 	\captionsetup{type=figure}
@@ -317,10 +323,10 @@ An experiment with filter paper \cite{Dullien1991} was performed to show the rob
 \section{Imbibition in Geometries with Axial Variations}
 \label{sec:geometry}
 
-In this paragraph the influence of the capillary geometry on the imbibition dynamics will be studied and is based on the publication from Reyssat et al. \cite{Reyssat2008}. In the following only the three-dimensional case will be discussed.
+In this paragraph, the influence of the capillary geometry on the imbibition dynamics will be studied, which is based on the publication from Reyssat et al. \cite{Reyssat2008}. In the following, only the three-dimensional case will be discussed.
 \bigskip
 
-To characterize the viscous dominated dynamics the incompressible flows will be treated as one-dimensional in the axial or z-direction while using the classical Darcy description. The analytical development is general for any one-dimensional flow to which the Darcy description applies. $r(z)$ donates here half of the width of the capillary and $z = 0$ indicates the opening with radius $r(0) = r_0$. Figure \ref{fig:geometry} shows three different geometry in two-dimensional plane for (a) cylindrical, (b) cone and (c) parabolic capillary. These capillaries are in contact with a reservoir of liquid at ambient pressure $P_0$, containing atmospheric pressure $\Pa$ and hydrostatic pressure $\Ps$. Wetting of the liquid on the walls leads to an invasion process.
+To characterize the viscous dominated dynamics, the incompressible flows will be treated as one-dimensional in the axial or z-direction while using the classical Darcy description. The analytical development is general for any one-dimensional flow to which the Darcy description applies. Here, $r(z)$ donates half of the width of the capillary and $z = 0$ indicates the opening with radius $r(0) = r_0$. Figure \ref{fig:geometry} shows three different geometry in two-dimensional plane for (a) cylindrical, (b) cone and (c) parabolic capillary. These capillaries are in contact with a reservoir of liquid at ambient pressure $P_0$, containing atmospheric pressure $\Pa$ and hydrostatic pressure $\Ps$. Wetting of the liquid on the walls leads to an invasion process.
 
 \begin{center}
 	\captionsetup{type=figure}
@@ -334,12 +340,12 @@ The averaged velocity $u$ is assumed to be in the form of Darcy's law,
 	\frac{\mu u}{k} = -\frac{\partial \Pt}{\partial z}~,
 	\label{eq:darcy-law}
 \end{gather}
-where $k$ is the permeability, which depends on the detailed shape of the cross-section. For slowly varying nearly rectangular shapes $k$ can be written as
+where $k$ is the permeability, which depends on the detailed shape of the cross-section. For slowly varying, nearly rectangular shapes $k$ can be written as
 \begin{gather}
 	k = \frac{r(z)^2}{\lambda} = \frac{r(z)^2}{8}
 	\label{eq:permeability}
 \end{gather}
-In addition to that mass conservation states that volumetric flow rate $Q$ is given by
+In addition to that, mass conservation states that the volumetric flow rate $Q$ is given by
 \begin{gather}
 	Q = u \pi r(z)^2  
 	\label{eq:volume-flux}
@@ -359,7 +365,7 @@ The rate of penetration $\left(\mathrm{d}l/\mathrm{d}t\right)$ is then given by 
 	\boxed{\dldt = \frac{c \gamma}{8\mu} \left[ r(l)^3 \int_0^{l}\!\!\!\dz~r(z)^{-4} \right]^{-1}}~.
 	\label{eq:rate-geometry}
 \end{gather}
-Equation (\ref{eq:rate-geometry}) serves as generalization of the usual imbibition equation for invasion into a structured (shaped) solid in three dimension.
+Equation (\ref{eq:rate-geometry}) serves as generalization of the usual imbibition equation for invasion into a structured (shaped) solid in three dimensions.
 \bigskip
 
 In the next step the general case of a power-law-shaped profile will be considered to solve Equation (\ref{eq:rate-geometry}), which is given by
@@ -372,7 +378,7 @@ where $\alpha$ is the opening angle and depends on the exponent $n$. Next, the m
 	\dldt = \frac{c \gamma r_0}{8\mu} \left[ \left(1 + \frac{\alpha}{r_0} l^n \right)^3 \int_0^{l}\!\!\!\dz~\left(1 + \frac{\alpha}{r_0} z^n \right)^{-4} \right]^{-1}~.
 	\label{eq:rate-geometry-power-law}
 \end{gather}
-In general $c$ depends on the position of the meniscus and the geometry with $c(l) = 2\cos(\theta + \arctan(\mathrm{d}r/\mathrm{d}z(l)))$ but since the cosine is bounded the approximation of $c = \text{const}$ will be applied. Additionally, to preserve clarity the following dimensionless parameters will be introduced
+In general, $c$ depends on the position of the meniscus and the geometry with $c(l) = 2\cos(\theta + \arctan(\mathrm{d}r(l)/\mathrm{d}z))$, but since the cosine is bounded, the approximation of $c = \text{const}$ will be applied. Additionally, to preserve clarity, the following dimensionless parameters will be introduced
 \begin{gather}
 	L = \left(\frac{\alpha}{r_0}\right)^{1/n} l\quad\text{and}\quad T = \frac{c\gamma r_0}{8\mu} \left(\frac{\alpha}{r_0}\right)^{2/n} t~,
 \end{gather}
@@ -383,8 +389,8 @@ which reduces Equation (\ref{eq:rate-geometry-power-law}) to
 \end{gather}
 Equation (\ref{eq:rate-geometry-power-law-reduced}) has two cases:
 \begin{itemize}
-	\item[(I)] For $n = 0$ ($r(z) = r_0$) the known "Lucas-Washburn Law" from paragraph \ref{sec:BCLW-imbibition} can be recovered from Equation (\ref{eq:rate-geometry-power-law-reduced}).
-	\item[(II)] For $n > 1$ there are two asymptotic limits to identify:
+	\item[(I)] For $n = 0$ ($r(z) = r_0$), the known "Lucas-Washburn Law" from paragraph \ref{sec:BCLW-imbibition} can be recovered from Equation (\ref{eq:rate-geometry-power-law-reduced}).
+	\item[(II)] For $n \ge 1$, there are two asymptotic limits to identify:
 	\begin{itemize}
 		\item[(i)] At short times, which corresponds to $L \ll 1$ and $\int_0^{L}\!\dZ~\left(1 + Z^n \right)^{-4} \simeq L$. Thus, Equation (\ref{eq:rate-geometry-power-law-reduced}) simply into
 		\begin{gather}
@@ -397,7 +403,7 @@ Equation (\ref{eq:rate-geometry-power-law-reduced}) has two cases:
 		\end{gather}
 	\end{itemize}
 \end{itemize}
-To conclude independent of the shape of the capillary for short times the "Lucas-Washburn Law" ($L \sim T^{1/2}$) still applies but for long times a different dynamic ($L \sim T^{1/(3n+1)}$) have to be considered resulting in two regimes. The cross-over between these two limits occurs for $L \simeq 1$, i.e. $l \simeq (r_0/\alpha)^{1/n}$ and since the second regime depends on the parameter $n$, i.e. the shape of the capillary, one can finally say that the more diverging the geometry, the slower the dynamics become at long times.  In Fig. \ref{fig:geometry-dynamics}, three different solutions of Equation (\ref{eq:rate-geometry-power-law-reduced}) have been presented for the three-dimensional axisymmetric geometry.
+To conclude, independent of the shape of the capillary two time regimes exist. For short times, the "Lucas-Washburn Law" ($L \sim T^{1/2}$) still applies, but for long times, a different dynamic ($L \sim T^{1/(3n+1)}$) have to be considered. The cross-over between these two limits occurs for $L \simeq 1$, i.e. $l \simeq (r_0/\alpha)^{1/n}$. Since, the second regime depends on the parameter $n$, i.e. the shape of the capillary, one can finally say that the more diverging the geometry, the slower the dynamics become at long times.  In Fig. \ref{fig:geometry-dynamics}, three different solutions of Equation (\ref{eq:rate-geometry-power-law-reduced}) have been presented for the three-dimensional axisymmetric geometry.
 \begin{center}
 	\captionsetup{type=figure}
 	\includegraphics[width = \linewidth]{../pictures/Geometry-Dynamics.png}
