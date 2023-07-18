@@ -6,18 +6,24 @@ MOTIVATION - WHAT IS IMBIBITION?
 
 - Imbibition process of everyday life
 - Dunking biscuit into coffee, getting drenched with rain, drenching sugar with alcohol
+
 - Application in nature
     -> Water reaching tips of the tallest trees
     -> Flow through soil (Dracy Law)
 -Application in industry
     -> Oil recovery
     -> Chromatography (experiment in chemistry)
-    -> Food processing, agriculture 
+    -> Food processing, agriculture
+
 - Interplay of capillary pressure, viscous drag, volume conservation and gravity
 - Evolution of invasion with universial scaling on large length and timescales 
     -> Independent of the microscopic details of the fluid and media
 
+
+- Life Experiment with big sugar cone
+
 - In the following discussion about the Lucas Washburn Law and the influence of geometry
+
 
 ------------------------------------------------------------------------------------------------------------------
 THEORY - CAPILLARY FLOW
@@ -106,7 +112,6 @@ EXPERIMENTS
     -> Put coffee filter paper in contact with water
     -> l = t^1/2 lit bit visible
     -> Repeat experiment multiple times and get Lucas-Washburn Law (with substraction of offset (explain?))
-- Life Experiment with big sugar cone (?)
 
 -----------------------------------------------------------------------------------------------------------------
 CONCLUSION
