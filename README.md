@@ -2,6 +2,10 @@
 
 This repository contains all my work regarding the Masterseminar about the topic of imbibition and porous media flow which covers the derivation of the "Lucas-Washburn Law" and the influence of geometrically variation of the capillary structure.
 
+# Abstract
+
+Imbibtition is a process in which liquid gets sucked into porous media. This process is part of the everyday life and has many application in nature and industry. The dynamics of imbibition however can be understand with the dynamics of capillary flow in which the lenght of a column liquid follows a simple square root of time relation. Varying the geometry of the capillary results in the same relation for short times but changes the dynamics for long times with the outcome that more diverging geometry causes slower dynamics.
+
 $l^2 = \left(\frac{\gamma}{\mu}\frac{\cos\theta}{2}\right)rt$ 
 
 "Lucas Washburn Law"
